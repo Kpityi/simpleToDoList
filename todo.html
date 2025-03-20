@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./todo.css" />
+    <title>Simple To Do list</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="title">To Do List</h1>
+      <div class="input-container">
+        <div class="input-group">
+          <label for="todo" class="label">Feladat:</label>
+          <input
+            type="text"
+            name="todo"
+            id="todo"
+            class="input"
+            placeholder="Új feladat hozzáadása" />
+        </div>
+        <button type="button" class="button" onclick="addToList()">
+          Hozzáad
+        </button>
+      </div>
+      <div class="tasks">
+        <h2 class="todos">Feladatok:</h2>
+        <div class="tasks-container"></div>
+      </div>
+      <div class="button-container">
+        <button type="button" class="button" popovertarget="popover-save">
+          Mentés
+        </button>
+        <button
+          type="button"
+          class="button"
+          popovertarget="popover-load"
+          onclick="openFile()">
+          Megnyit
+        </button>
+      </div>
+    </div>
+
+    <!-- Popover /save to do list/ to do lista mentése / -->
+    <div popover id="popover-save">
+      <div class="popover-content">
+        <div class="input-group">
+          <label for="save-as" class="label">Mentés:</label>
+          <input
+            type="text"
+            name="name"
+            id="save-as"
+            placeholder="Mentés"
+            class="input" />
+        </div>
+        <div class="button-container">
+          <!-- sava button -->
+          <button
+            class="button"
+            type="button"
+            popovertarget="popover-save"
+            popovertargetaction="hide"
+            onclick="save()">
+            Mentés
+          </button>
+          <!-- cancel button -->
+          <button
+            class="button"
+            type="button"
+            popovertarget="popover-save"
+            popovertargetaction="hide">
+            Mégsem
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- popover /load to do list/ -->
+    <div popover id="popover-load">
+      <div class="popover-content">
+        <h2 class="file-list">Válasz egy listát</h2>
+        <div class="file-container"></div>
+        <div class="button-container">
+          <button
+            class="button clear"
+            type="button"
+            popovertarget="popover-load"
+            popovertagetaction="hide"
+            onclick="filesClear()">
+            Összes törlése
+          </button>
+          <button
+            class="button"
+            type="button"
+            popovertarget="popover-load"
+            popovertagetaction="hide">
+            Mégsem
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./todo.js"></script>
+  </body>
+</html>

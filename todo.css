@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  line-height: 1.2rem;
+}
+body {
+  padding: 2rem;
+  height: 100vh;
+  background: linear-gradient(135deg, white, rgb(197, 193, 193));
+}
+.main {
+  width: 90%;
+  margin: 1rem auto;
+}
+.title {
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 2rem;
+}
+.todos {
+  margin: 3rem auto 1rem auto;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  align-items: end;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-width: 300px;
+}
+.input {
+  box-shadow: 2px 2px 4px black;
+  line-height: 1.5rem;
+  width: 250px;
+  padding: 0.4rem;
+  border-radius: 10px;
+}
+.input:focus {
+  outline: none;
+}
+.error {
+  border: 2px solid red;
+  box-shadow: 2px 2px 6px rgb(209, 57, 57);
+}
+.error::placeholder {
+  color: red;
+}
+.button {
+  background-color: blue;
+  color: white;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 0.5rem 1.2rem;
+  height: 40px;
+  width: 160px;
+  cursor: pointer;
+}
+.tasks-container {
+  max-width: 500px;
+  margin: 1rem auto 3rem auto;
+}
+.task {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0.5rem;
+  padding: 0.3rem 0.4rem;
+  box-shadow: 1px 1px 2px rgb(173, 160, 160);
+  border-radius: 5px;
+}
+.task-label {
+  flex: 10;
+  cursor: pointer;
+}
+.task-input {
+  flex: 1;
+  cursor: pointer;
+}
+.icon {
+  flex: 1;
+  font-size: 1.4rem;
+  text-align: center;
+  color: rgb(235, 17, 17);
+  text-shadow: 1px 1px 2px rgb(173, 160, 160);
+  cursor: pointer;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+#popover-save,
+#popover-load {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.popover-content {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem auto;
+  transform: translateY(70%);
+  box-shadow: 2px 2px 6px black;
+  border-radius: 20px;
+  min-width: 300px;
+  max-width: 500px;
+  min-height: 200px;
+  max-height: max-content;
+  background-color: white;
+  padding: 1rem;
+}
+.file-name {
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.file-name::after {
+  display: block;
+  margin-left: -10%;
+  content: "";
+  width: 120%;
+  height: 1px;
+  background-color: gray;
+}
+.clear {
+  background-color: rgb(217, 24, 24);
+}
